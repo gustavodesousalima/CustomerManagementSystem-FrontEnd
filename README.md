@@ -45,6 +45,6 @@ Inicie o servidor de desenvolvimento:
 # No diretório frontend
 npm run start
 
-O aplicativo frontend estará disponível em http://localhost:5173 e o servidor backend em http://localhost:5001/clientes/.
+O aplicativo frontend estará disponível em http://localhost:5173.
 
 Observação: Certifique-se de que ambos os servidores estejam em execução simultaneamente para o correto funcionamento do sistema.
