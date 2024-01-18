@@ -19,7 +19,7 @@ function ModalAdd({ isOpen, onClose }) {
         const newClient = { name, email, telephone, coord_x, coord_y };
 
         // Requisição POST para a API
-        axios.post('http://localhost:5001/registercustomer/', newClient)
+        axios.post('http://localhost:5001/clients/registercustomer/', newClient)
             .then(response => {
                 console.log(response.data);
                 // Fecha o modal e limpa os campos do formulário

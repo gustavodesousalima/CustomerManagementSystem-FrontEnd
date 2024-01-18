@@ -9,7 +9,7 @@ function Main() {
     // Função para buscar dados da API
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/getcustomers/');
+        const response = await axios.get('http://localhost:5001/clients/getcustomers/');
         setClientes(response.data); // Atualiza o estado com os dados da API
       } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
