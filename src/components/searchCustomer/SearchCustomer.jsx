@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import VisitOrderModal from '../modalOrderVisit/ModalOrderVisit';
-import ModalFilter from '../modalFilter/ModalFilter';  
+import ModalFilter from '../modalFilter/ModalFilter'; 
+import ModalAdd from '../modalAdd/ModalAdd';
 import axios from 'axios';
 
 import './searchCustomer.css';
@@ -9,7 +10,16 @@ function SearchBar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [customerName, setCustomerName] = useState('');
   const [customerData, setCustomerData] = useState(null);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [isOrderVisitModalOpen, setIsOrderVisitModalOpen] = useState(false);
+
+  const handleAddClick = () => {
+    setIsAddModalOpen(true);
+  };
+  
+  const handleCloseAddModal = () => {
+    setIsAddModalOpen(false);
+  };
 
   const handleOrderVisitClick = () => {
     setIsOrderVisitModalOpen(true);
@@ -26,7 +36,7 @@ function SearchBar() {
 
 const handleSearchClick = async () => {
   try {
-    const response = await axios.get('https://seu-endpoint-aqui.com/clientes');
+    const response = await axios.get('http://localhost:5001/clientes/get');
 
     const clienteEncontrado = response.data.filter(cliente => 
       cliente.name.trim().toLowerCase() === customerName.trim().toLowerCase()
@@ -63,11 +73,12 @@ const handleSearchClick = async () => {
       <button id='orderVisit' onClick={handleOrderVisitClick}>
         Ordem de visitação
       </button>
-      <button id='buttonAdd'>Adicionar</button>
+      <button id='buttonAdd' onClick={handleAddClick}>Adicionar</button>
 
       {/* Renderiza os modais */}
       <VisitOrderModal isOpen={isOrderVisitModalOpen} onClose={handleCloseOrderVisitModal} />
       <ModalFilter isOpen={isModalOpen} onClose={handleCloseModal} customerData={customerData} />
+      <ModalAdd isOpen={isAddModalOpen} onClose={handleCloseAddModal} />
     </div>
   );
 }

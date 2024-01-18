@@ -1,0 +1,36 @@
+/* modalAdd.css */
+
+/* Estiliza o título do modal */
+#containerAdd > h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Adiciona algum espaçamento entre os campos do formulário */
+ form input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Estiliza os botões */
+#buttonClose, #buttonSave {
+   font-family: 'Roboto Slab', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 8rem;
+    height: 5vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Estiliza o botão de fechar */
+#buttonClose:hover{
+    background-color: #ff0000;
+    color: white;
+    border: none;
+}
