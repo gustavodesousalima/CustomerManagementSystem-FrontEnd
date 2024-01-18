@@ -35,7 +35,7 @@ function SearchBar() {
 
   const handleSearchClick = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/clientes/get');
+      const response = await axios.get('http://localhost:5001/getscustomers/');
 
       const clienteEncontrado = response.data.filter(cliente =>
         cliente.name.trim().toLowerCase() === customerName.trim().toLowerCase()
