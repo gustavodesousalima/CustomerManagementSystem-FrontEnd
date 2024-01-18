@@ -16,3 +16,21 @@
     color: white;
     font-family: 'Roboto Slab', sans-serif;
 }
+
+@media screen and (max-width: 600px) {
+    #title_Header {
+        font-size: 1.2rem;
+    }
+    
+    #container_Header {
+        height: 5%;
+    }
+
+    #container_Header > div {
+        margin: 0 1rem;
+    }
+
+    #container_Header > div:first-child {
+        margin-left: 0;
+    }
+}

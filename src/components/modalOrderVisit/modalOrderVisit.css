@@ -60,3 +60,34 @@
 .modal-content tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 80%;
+  }
+
+  .modal-content button {
+    width: 80%;
+  }
+
+  .modal-content table {
+    width: 100%;
+  }
+
+  .modal-content > div {
+    margin: 0 1rem;
+  }
+
+  .modal-content > div:first-child {
+    margin-left: 0;
+  }
+
+  .modal-content > div:last-child {
+    margin-right: 0;
+  }
+
+  .modal-content > div > div {
+    margin: 0 1rem;
+  }
+  
+}
