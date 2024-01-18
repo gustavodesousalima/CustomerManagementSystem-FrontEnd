@@ -2,7 +2,7 @@
 
 Este é o repositório do frontend para o Customer Management System, um sistema de gerenciamento de clientes desenvolvido como parte do teste de programação para a vaga de desenvolvedor na Facilita Jurídico.
 
-**Importante:** O backend para este projeto está em um repositório separado. Certifique-se de também clonar e configurar o backend para o funcionamento adequado do sistema. O repositório do backend pode ser encontrado em [customermanagementsystem-backend](https://github.com/seu-usuario/customermanagementsystem-backend).
+**Importante:** O backend para este projeto está em um repositório separado. Certifique-se de também clonar e configurar o backend para o funcionamento adequado do sistema. O repositório do backend pode ser encontrado em [customermanagementsystem-backend](https://github.com/gustavodesousalima/CustomerManagementSystem-BackEnd.git).
 
 ## Ferramentas Utilizadas
 
@@ -32,72 +32,29 @@ Certifique-se de ter o Node.js instalado em sua máquina antes de prosseguir.
 1. **Clone ambos os repositórios (frontend e backend):**
 
    ```bash
-   git clone https://github.com/seu-usuario/customermanagementsystem-frontend.git
-   git clone https://github.com/seu-usuario/customermanagementsystem-backend.git
+   git clone https://github.com/gustavodesousalima/CustomerManagementSystem-FrontEnd.git
+   git clone https://github.com/gustavodesousalima/CustomerManagementSystem-BackEnd.git
    cd customermanagementsystem-frontend
 
 Instale as dependências para ambos os projetos (frontend e backend):
 
-bash
-Copy code
+
 # No diretório frontend
-cd customermanagementsystem-frontend
+cd ../customermanagementsystem-frontend
 npm install
 
 # No diretório backend
 cd ../customermanagementsystem-backend
 npm install
+
 Inicie ambos os servidores de desenvolvimento (frontend e backend):
 
-bash
-Copy code
 # No diretório frontend
 npm run start
 
 # No diretório backend
 npm run start
-O aplicativo frontend estará disponível em http://localhost:3000 e o servidor backend em http://localhost:porta.
+
+O aplicativo frontend estará disponível em http://localhost:5173 e o servidor backend em http://localhost:5001/clientes/.
 
 Observação: Certifique-se de que ambos os servidores estejam em execução simultaneamente para o correto funcionamento do sistema.
-
-Scripts Disponíveis
-Iniciar o servidor de desenvolvimento (frontend):
-
-bash
-Copy code
-npm run start
-Construir a aplicação para produção (frontend):
-
-bash
-Copy code
-npm run build
-Executar o linter para verificar e corrigir problemas no código (frontend):
-
-bash
-Copy code
-npm run lint
-Visualizar a construção da aplicação antes de criar (frontend):
-
-bash
-Copy code
-npm run preview
-Iniciar o servidor de desenvolvimento (backend):
-
-bash
-Copy code
-npm run start
-Construir a aplicação para produção (backend):
-
-bash
-Copy code
-npm run build
-Executar o linter para verificar e corrigir problemas no código (backend):
-
-bash
-Copy code
-npm run lint
-Visualizar a construção da aplicação antes de criar (backend):
-
-bash
-Copy code
-npm run preview
