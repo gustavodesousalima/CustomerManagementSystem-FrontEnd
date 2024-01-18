@@ -36,23 +36,13 @@ Certifique-se de ter o Node.js instalado em sua máquina antes de prosseguir.
    
    cd customermanagementsystem-frontend
 
-Instale as dependências para ambos os projetos (frontend e backend):
-
-
 # No diretório frontend
 cd ../customermanagementsystem-frontend
 npm install
 
-# No diretório backend
-cd ../customermanagementsystem-backend
-npm install
-
-Inicie ambos os servidores de desenvolvimento (frontend e backend):
+Inicie o servidor de desenvolvimento:
 
 # No diretório frontend
-npm run start
-
-# No diretório backend
 npm run start
 
 O aplicativo frontend estará disponível em http://localhost:5173 e o servidor backend em http://localhost:5001/clientes/.
