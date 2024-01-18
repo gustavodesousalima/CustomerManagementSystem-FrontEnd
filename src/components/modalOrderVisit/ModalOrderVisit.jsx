@@ -7,7 +7,7 @@ const VisitOrderModal = ({ isOpen, onClose }) => {
 
     useEffect(() => {
         if (isOpen) {
-            fetch('http://localhost:5001/clientes/calculate') // Substitua com a URL da sua API
+            fetch('http://localhost:5001/calculaterouter') // Substitua com a URL da sua API
                 .then(response => response.json())
                 .then(data => setData(data));
         }
