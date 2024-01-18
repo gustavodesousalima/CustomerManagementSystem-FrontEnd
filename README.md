@@ -29,11 +29,11 @@ Este é o repositório do frontend para o Customer Management System, um sistema
 
 Certifique-se de ter o Node.js instalado em sua máquina antes de prosseguir.
 
-1. **Clone ambos os repositórios (frontend e backend):**
+1. **Clone o repositório:
 
    ```bash
    git clone https://github.com/gustavodesousalima/CustomerManagementSystem-FrontEnd.git
-   git clone https://github.com/gustavodesousalima/CustomerManagementSystem-BackEnd.git
+   
    cd customermanagementsystem-frontend
 
 Instale as dependências para ambos os projetos (frontend e backend):
