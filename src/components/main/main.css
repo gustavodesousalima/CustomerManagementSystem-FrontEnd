@@ -14,16 +14,15 @@ table {
     align-items: first baseline;
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
 }
 
 thead th, tbody td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
 }
 
 thead th {
-    text-align: center;
     background-color: #f2f2f2;
   }
   
