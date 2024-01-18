@@ -16,11 +16,12 @@ const VisitOrderModal = ({ isOpen, onClose }) => {
     if (!isOpen) {
         return null;
     }
-    
+
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-            <button onClick={onClose}>Fechar</button>
+            <h1>Rotas de visitação</h1>
+                <button onClick={onClose}>Fechar</button>
                 <table>
                     <thead>
                         <tr>
@@ -34,9 +35,9 @@ const VisitOrderModal = ({ isOpen, onClose }) => {
                                 <td>{item.name}</td>
                                 <td>{item.distance}</td>
                             </tr>
-                                ))}
-                                <td>email</td>
-                                <td>email</td>
+                        ))}
+                        <td>email</td>
+                        <td>email</td>
                     </tbody>
                 </table>
             </div>

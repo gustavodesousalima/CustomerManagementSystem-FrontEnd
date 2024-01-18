@@ -1,22 +1,26 @@
-/* modalAdd.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 /* Estiliza o título do modal */
-#containerAdd > h2 {
+#containerAdd>h2 {
     text-align: center;
     color: #333;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1rem;
 }
 
 /* Adiciona algum espaçamento entre os campos do formulário */
- form input {
+form input {
     display: block;
     margin-bottom: 10px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
+    font-size: 0.9rem;
 }
 
 /* Estiliza os botões */
-#buttonClose, #buttonSave {
-   font-family: 'Roboto Slab', sans-serif;
+#buttonClose,
+#buttonSave {
+    font-family: 'Roboto Slab', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     width: 8rem;
@@ -29,7 +33,7 @@
 }
 
 /* Estiliza o botão de fechar */
-#buttonClose:hover{
+#buttonClose:hover {
     background-color: #ff0000;
     color: white;
     border: none;

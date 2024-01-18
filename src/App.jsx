@@ -8,7 +8,7 @@ function App() {
     <div id='container_App'>
       <Header />
       <SearchCustomer />
-      <Main /> 
+      <Main />
     </div>
   );
 }

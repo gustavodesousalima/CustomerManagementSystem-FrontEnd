@@ -1,15 +1,11 @@
-import './modalAdd.css';
-
 import { useState } from 'react';
 import Modal from 'react-modal';
 import axios from 'axios';
-
-// Certifique-se de ligar isso ao início do seu aplicativo
-Modal.setAppElement('#root');
-
 import PropTypes from 'prop-types';
+import './modalAdd.css';
 
-function ModalAdd({ isOpen, onClose }) {  // Adicione as props aqui
+Modal.setAppElement('#root');
+function ModalAdd({ isOpen, onClose }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [telephone, setPhone] = useState('');
@@ -19,15 +15,15 @@ function ModalAdd({ isOpen, onClose }) {  // Adicione as props aqui
     function handleSubmit(event) {
         event.preventDefault();
 
-        // Crie um objeto com os dados do formulário
+        // Objeto com os dados do formulário
         const newClient = { name, email, telephone, coord_x, coord_y };
 
-        // Faça uma requisição POST para a API
+        // Requisição POST para a API
         axios.post('http://localhost:5001/clientes/post', newClient)
             .then(response => {
                 console.log(response.data);
-                // Feche o modal e limpe os campos do formulário
-                onClose();  // Use a prop onClose aqui
+                // Fecha o modal e limpa os campos do formulário
+                onClose();
                 setName('');
                 setEmail('');
                 setPhone('');
@@ -41,17 +37,17 @@ function ModalAdd({ isOpen, onClose }) {  // Adicione as props aqui
 
     return (
         <div id='containerAdd'>
-            <Modal isOpen={isOpen} onRequestClose={onClose}>  
+            <Modal isOpen={isOpen} onRequestClose={onClose}>
                 <h2>Adicionar Cliente</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nome" required />
                     <input type="tel" value={telephone} onChange={e => setPhone(e.target.value)} placeholder="Telefone" required />
                     <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required />
-                    <input type="text" value={coord_x} onChange={e => setCoordX(e.target.value.slice(0, 1))} placeholder="Coordenada X" required />
-                    <input type="text" value={coord_y} onChange={e => setCoordY(e.target.value.slice(0, 1))} placeholder="Coordenada Y" required />
+                    <input type="number" value={coord_x} onChange={e => setCoordX(e.target.value.slice(0, 1))} placeholder="Coordenada X" required />
+                    <input type="number" value={coord_y} onChange={e => setCoordY(e.target.value.slice(0, 1))} placeholder="Coordenada Y" required />
                     <button id='buttonAdd' type="submit">Salvar</button>
                 </form>
-                <button id='buttonClose' onClick={onClose}>Fechar</button>  
+                <button id='buttonClose' onClick={onClose}>Fechar</button>
             </Modal>
         </div>
     );

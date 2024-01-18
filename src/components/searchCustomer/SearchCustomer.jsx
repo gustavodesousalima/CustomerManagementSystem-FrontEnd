@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import VisitOrderModal from '../modalOrderVisit/ModalOrderVisit';
-import ModalFilter from '../modalFilter/ModalFilter'; 
+import ModalFilter from '../modalFilter/ModalFilter';
 import ModalAdd from '../modalAdd/ModalAdd';
 import axios from 'axios';
-
 import './searchCustomer.css';
 
 function SearchBar() {
@@ -16,7 +15,7 @@ function SearchBar() {
   const handleAddClick = () => {
     setIsAddModalOpen(true);
   };
-  
+
   const handleCloseAddModal = () => {
     setIsAddModalOpen(false);
   };
@@ -30,29 +29,29 @@ function SearchBar() {
   };
 
   const handleCloseModal = () => {
-  console.log('Fechando o modal');
-  setIsModalOpen(false);
-};
+    console.log('Fechando o modal');
+    setIsModalOpen(false);
+  };
 
-const handleSearchClick = async () => {
-  try {
-    const response = await axios.get('http://localhost:5001/clientes/get');
+  const handleSearchClick = async () => {
+    try {
+      const response = await axios.get('http://localhost:5001/clientes/get');
 
-    const clienteEncontrado = response.data.filter(cliente => 
-      cliente.name.trim().toLowerCase() === customerName.trim().toLowerCase()
-    )[0];
+      const clienteEncontrado = response.data.filter(cliente =>
+        cliente.name.trim().toLowerCase() === customerName.trim().toLowerCase()
+      )[0];
 
-    if (clienteEncontrado) {
-      setCustomerData(clienteEncontrado);
-      setIsModalOpen(true);
-    } else {
-      window.alert('Cliente não encontrado.');
+      if (clienteEncontrado) {
+        setCustomerData(clienteEncontrado);
+        setIsModalOpen(true);
+      } else {
+        window.alert('Cliente não encontrado.');
+      }
+    } catch (error) {
+      window.alert('Erro ao buscar dados do cliente.');
+      console.error('Erro ao buscar dados do cliente:', error);
     }
-  } catch (error) {
-    window.alert('Erro ao buscar dados do cliente.');
-    console.error('Erro ao buscar dados do cliente:', error);
-  }
-};
+  };
 
   const handleInputChange = (event) => {
     setCustomerName(event.target.value);
@@ -75,7 +74,6 @@ const handleSearchClick = async () => {
       </button>
       <button id='buttonAdd' onClick={handleAddClick}>Adicionar</button>
 
-      {/* Renderiza os modais */}
       <VisitOrderModal isOpen={isOrderVisitModalOpen} onClose={handleCloseOrderVisitModal} />
       <ModalFilter isOpen={isModalOpen} onClose={handleCloseModal} customerData={customerData} />
       <ModalAdd isOpen={isAddModalOpen} onClose={handleCloseAddModal} />

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
-#containerSearch{
+#containerSearch {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,13 +10,13 @@
     gap: 1rem;
 }
 
-#inputSearch{
+#inputSearch {
     font-size: 1rem;
     width: 50%;
     height: 5vh;
 }
 
-#buttonSearch{
+#buttonSearch {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -28,13 +28,13 @@
     cursor: pointer;
 }
 
-#buttonSearch:hover{
+#buttonSearch:hover {
     background-color: #0888dd;
     border: none;
     color: #fff;
 }
 
-#orderVisit{
+#orderVisit {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -46,13 +46,13 @@
     cursor: pointer;
 }
 
-#orderVisit:hover{
+#orderVisit:hover {
     background-color: #0888dd;
     border: none;
     color: #fff;
 }
 
-#buttonAdd{
+#buttonAdd {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -64,7 +64,7 @@
     cursor: pointer;
 }
 
-#buttonAdd:hover{
+#buttonAdd:hover {
     background-color: #0888dd;
     border: none;
     color: #fff;
