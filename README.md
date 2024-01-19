@@ -36,10 +36,10 @@ Certifique-se de ter o Node.js instalado em sua máquina antes de prosseguir.
    ```bash
    git clone https://github.com/gustavodesousalima/CustomerManagementSystem-FrontEnd.git
    
-   cd customermanagementsystem-frontend
+   cd CustomerManagementSystem-FrontEnd
 
 # No diretório frontend
-cd ../customermanagementsystem-frontend
+cd ../CustomerManagementSystem-FrontEnd
 
 
 npm install
