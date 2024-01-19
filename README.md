@@ -11,6 +11,8 @@ Este é o repositório do frontend para o Customer Management System, um sistema
 - **Axios:** v1.6.5
 - **Cors:** v2.8.5
 - **React Modal:** v3.16.1
+- **Node.js:** v21.0.0 
+- **PostgreSQL:** v14.10.0
 
 ### Ferramentas de Desenvolvimento
 
