@@ -38,6 +38,8 @@ Certifique-se de ter o Node.js instalado em sua máquina antes de prosseguir.
 
 # No diretório frontend
 cd ../customermanagementsystem-frontend
+
+
 npm install
 
 Inicie o servidor de desenvolvimento:
